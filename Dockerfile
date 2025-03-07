@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy the project and restore dependencies
-COPY ["MyApp.csproj", "./"]
+COPY ["dotnet.csproj", "./"]
 RUN dotnet restore
 
 # Copy everything else and build the app
@@ -18,4 +18,4 @@ RUN dotnet publish -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "MyApp.dll"]
+ENTRYPOINT ["dotnet", "dotnet.dll"]
