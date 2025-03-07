@@ -1,4 +1,4 @@
-name: .NET CI with Code Coverage
+name: .NET CI with Docker
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'  # Adjust based on your project version
+          dotnet-version: '8.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
@@ -27,16 +27,13 @@ jobs:
       - name: Build application
         run: dotnet build --configuration Release --no-restore
 
-      - name: Run tests with coverage
-        run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
+      - name: Publish application
+        run: dotnet publish --configuration Release --output publish/
 
-      - name: Convert coverage to HTML report
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Build and Push Docker Image
         run: |
-          dotnet tool install -g dotnet-reportgenerator-globaltool
-          reportgenerator "-reports:**/coverage.cobertura.xml" "-targetdir:coveragereport" "-reporttypes:Html"
-
-      - name: Upload coverage report as an artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: code-coverage-report
-          path: coveragereport
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/myapp:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
