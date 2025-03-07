@@ -36,7 +36,7 @@ jobs:
           reportgenerator "-reports:**/coverage.cobertura.xml" "-targetdir:coveragereport" "-reporttypes:Html"
 
       - name: Upload coverage report as an artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
           path: coveragereport
