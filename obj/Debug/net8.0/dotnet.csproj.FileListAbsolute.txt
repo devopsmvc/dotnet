@@ -1,0 +1,15 @@
+C:\Users\mahes\OneDrive\Desktop\dotnet\bin\Debug\net8.0\dotnet.exe
+C:\Users\mahes\OneDrive\Desktop\dotnet\bin\Debug\net8.0\dotnet.deps.json
+C:\Users\mahes\OneDrive\Desktop\dotnet\bin\Debug\net8.0\dotnet.runtimeconfig.json
+C:\Users\mahes\OneDrive\Desktop\dotnet\bin\Debug\net8.0\dotnet.dll
+C:\Users\mahes\OneDrive\Desktop\dotnet\bin\Debug\net8.0\dotnet.pdb
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.AssemblyInfoInputs.cache
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.AssemblyInfo.cs
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.csproj.CoreCompileInputs.cache
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.sourcelink.json
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.dll
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\refint\dotnet.dll
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.pdb
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\dotnet.genruntimeconfig.cache
+C:\Users\mahes\OneDrive\Desktop\dotnet\obj\Debug\net8.0\ref\dotnet.dll
